@@ -53,13 +53,13 @@ Example:
 ```sh
  - name: update access-list "{{ acl_name }}"
     vars:
-      **acl_name: acl-test-2**
+      acl_name: acl-test-2
     import_role:
       name: ios-acl
       
   - name: update access-list "{{ acl_name }}"
     vars:
-      **acl_name: acl-test-3**
+      acl_name: acl-test-3
     import_role:
       name: ios-acl
  
