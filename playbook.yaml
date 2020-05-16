@@ -1,0 +1,11 @@
+---
+- hosts: edge-routers
+  gather_facts: false
+  connection: local
+
+  tasks:
+  - name: update access-list "{{ acl_name }}"
+    vars:
+      acl_name: acl-test
+    import_role:
+      name: ios-acl

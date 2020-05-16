@@ -1,0 +1,14 @@
+- name: update access-list {{ acl_name }}
+  ios_config:
+    lines: "{{ acl_content }}"
+    parents: ip access-list extended {{ acl_name }}
+    before: no ip access-list extended {{ acl_name }}
+    match: exact
+
+- name: show access-list {{ acl_name }}
+  ios_command:
+    commands: show ip access-lists {{ acl_name }}
+  register: output
+
+- debug:
+    var=output.stdout_lines

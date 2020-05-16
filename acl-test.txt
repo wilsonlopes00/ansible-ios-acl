@@ -1,0 +1,5 @@
+10 permit tcp 10.0.0.0 0.0.0.255 host 10.100.0.3 eq 443
+20 permit udp 10.0.0.0 0.0.0.255 host 10.100.0.4 eq 53
+30 permit tcp 10.0.0.0 0.0.0.255 host 10.100.0.4 eq 53
+40 permit icmp host 10.0.0.10 host 10.10.10.10
+1000 deny ip any any
